@@ -1,12 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import { Button } from "@/components/ui/button"
+import { useToast } from "@/components/ui/use-toast"
+import Dashboard from '@/components/Dashboard';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const Index = () => {
+  const { toast } = useToast()
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col bg-gray-100">
+      <Header />
+      <main className="flex-grow container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-8 text-center">Welcome to AI-PGF Checking Team</h1>
+        <Dashboard />
+        <div className="mt-8 text-center">
+          <Button 
+            onClick={() => {
+              toast({
+                title: "Welcome!",
+                description: "Thanks for joining the AI-PGF Checking Team.",
+              })
+            }}
+          >
+            Join the Team
+          </Button>
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 };

@@ -13,15 +13,17 @@ const Header = () => {
         </Link>
         <nav>
           <ul className="flex space-x-4">
-            <li><Button variant="ghost" asChild><Link to="/">Dashboard</Link></Button></li>
+            <li><Button variant="ghost" asChild><Link to="/dashboard">Dashboard</Link></Button></li>
             <li><Button variant="ghost" asChild><Link to="/projects">Projects</Link></Button></li>
             <li><Button variant="ghost" asChild><Link to="/team">Team</Link></Button></li>
             <li><Button variant="ghost" asChild><Link to="/contact">Contact</Link></Button></li>
           </ul>
         </nav>
         <div className="flex space-x-2">
-          <Button variant="ghost" size="icon">
-            <Settings className="h-5 w-5" />
+          <Button variant="ghost" size="icon" asChild>
+            <Link to="/settings">
+              <Settings className="h-5 w-5" />
+            </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
             <Link to="/auth">

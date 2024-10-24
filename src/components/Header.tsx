@@ -14,8 +14,9 @@ const Header = () => {
         <nav>
           <ul className="flex space-x-4">
             <li><Button variant="ghost" asChild><Link to="/">Dashboard</Link></Button></li>
-            <li><Button variant="ghost">Projects</Button></li>
-            <li><Button variant="ghost">Team</Button></li>
+            <li><Button variant="ghost" asChild><Link to="/projects">Projects</Link></Button></li>
+            <li><Button variant="ghost" asChild><Link to="/team">Team</Link></Button></li>
+            <li><Button variant="ghost" asChild><Link to="/contact">Contact</Link></Button></li>
           </ul>
         </nav>
         <div className="flex space-x-2">
